@@ -2,7 +2,7 @@ Summary:	A graphical frontend for dynamips Cisco 7200 Simulator
 #Summary(pl.UTF-8):	-
 Name:		GNS3
 Version:	0.3.2
-Release:	0.2
+Release:	0.3
 License:	GPL v2
 Group:		X11/Applications/Networking
 Source0:	http://dl.sourceforge.net/gns-3/%{name}-%{version}-src.tar.bz2
@@ -11,7 +11,7 @@ Source1:	http://pfe.epitech.net/frs/download.php/599/%{name}-%{version}_document
 # Source1-md5:	0c9cd5c97d0f19f4c00f4e3abd316c87
 Source2:	%{name}.desktop
 Source3:	%{name}.png
-Patch0:		%{name}-version.patch
+Patch0:		%{name}-setup.patch
 URL:		http://www.gns3.net/
 BuildRequires:	python >= 2.4
 BuildRequires:	rpmbuild(macros) >= 1.231
@@ -33,6 +33,7 @@ binary images from Cisco Systems.
 
 %prep
 %setup -q
+%patch0 -p1
 install %{SOURCE1} .
 
 %build
@@ -44,7 +45,7 @@ python ./setup.py install \
 	--root=$RPM_BUILD_ROOT
 
 # compile the scripts
-%{py_ocomp} $RPM_BUILD_ROOT%{py_sitescriptdir}
+#{py_ocomp} $RPM_BUILD_ROOT%{py_sitescriptdir}
 
 # remove .py files, leave just compiled ones.
 %{py_postclean}
@@ -73,6 +74,8 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitescriptdir}/%{name}/*.py[co]
 %{py_sitescriptdir}/%{name}/*/*.py[co]
 %{py_sitescriptdir}/%{name}/*/*/*.py[co]
+%{py_sitescriptdir}/%{name}/Dynagen/dynagen.ini
+%{py_sitescriptdir}/%{name}/Dynagen/configspec
 %{_mandir}/man1/gns3.1*
 %{_desktopdir}/%{name}.desktop
 %{_pixmapsdir}/%{name}.png
