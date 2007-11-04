@@ -1,0 +1,20 @@
+--- GNS3-0.3.2/setup.py~	2007-11-04 19:51:48.000000000 +0100
++++ GNS3-0.3.2/setup.py	2007-11-04 19:57:48.000000000 +0100
+@@ -10,7 +10,7 @@
+ 
+ setup( # Distribution meta-data
+         name = "gns3",
+-        version = "0.2alpha",
++        version = "0.3.2-beta",
+         description = "A graphical frontend to dynamips",
+         author = "Jeremy Grossmann, David Ruiz, Romain Lamaison, Aurelien Levesque, Xavier Alt",
+         author_email = "contact@gns3.net",
+@@ -28,7 +28,7 @@
+             'GNS3.Ui',
+             'GNS3.Ui.ConfigurationPages',
+             'GNS3.Langs'],
+-        package_data = { 'GNS3': ['Langs/*.qm'] }
++        package_data = { 'GNS3': ['Langs/*.qm', 'Dynagen/configspec', 'Dynagen/dynagen.ini'] }
+ )
+ 
+ #TODO: merge the previous setup with the py2exe setup ?
