@@ -1,5 +1,5 @@
 Summary:	A graphical frontend for dynamips Cisco 7200 Simulator
-#Summary(pl.UTF-8):	-
+Summary(pl.UTF-8):	Graficzny interfejs do dynamips - symulatora Cisco 7200
 Name:		GNS3
 Version:	0.3.2
 Release:	0.3
@@ -13,7 +13,7 @@ Source2:	%{name}.desktop
 Source3:	%{name}.png
 Patch0:		%{name}-setup.patch
 URL:		http://www.gns3.net/
-BuildRequires:	python >= 2.4
+BuildRequires:	python >= 1:2.4
 BuildRequires:	rpmbuild(macros) >= 1.231
 Requires:	dynagen
 Requires:	dynamips >= 0.2.8
@@ -29,14 +29,19 @@ is based on NS-3, a discrete-event network simulator for Internet
 systems, and Dynamips, an IOS emulator which allows users to run IOS
 binary images from Cisco Systems.
 
-#%%description -l pl.UTF-8
+%description -l pl.UTF-8
+GNS-3 to graficzny symulator sieci umożliwiający projektowanie
+złożonych topologii sieci. Pozwala uruchamiać symulacje lub
+konfigurować urządzenia od prostych stacji roboczych do potężnych
+routerów Cisco. Jest oparty na NS-3 - symulatorze sieci ze zdarzeniami
+dyskretnymi do systemów internetowych oraz Dynamisie - emulatorze
+IOS-a pozwalającym użytkownikom uruchamiać binarne obrazy IOS-a z
+Cisco Systems.
 
 %prep
 %setup -q
 %patch0 -p1
 install %{SOURCE1} .
-
-%build
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -52,7 +57,7 @@ python ./setup.py install \
 
 install -D %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}/%{name}.desktop
 install -D %{SOURCE3} $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}.png
-install -D {docs/man,$RPM_BUILD_ROOT%{_mandir}/man1}/gns3.1
+install -D docs/man/gns3.1 $RPM_BUILD_ROOT%{_mandir}/man1/gns3.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
