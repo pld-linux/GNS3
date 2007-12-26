@@ -1,13 +1,11 @@
 [Desktop Entry]
 Version=1.0
-Encoding=UTF-8
 Name=GNS3
 Comment=Dynamisp Cisco router simulator frontend
 Exec=gns3
-Icon=GNS3.png
+Icon=GNS3
 StartupNotify=false
 Terminal=false
 Type=Application
 Categories=Qt;Network;
-
 # vi:encoding=utf-8
