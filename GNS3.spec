@@ -13,8 +13,8 @@ Source2:	%{name}.desktop
 Source3:	%{name}.png
 Patch0:		%{name}-setup.patch
 URL:		http://www.gns3.net/
-BuildRequires:	python >= 1:2.4
 BuildRequires:	rpmbuild(macros) >= 1.231
+BuildRequires:	rpm-pythonprov
 Requires:	dynagen
 Requires:	dynamips >= 0.2.8
 Requires:	python-PyQt4
