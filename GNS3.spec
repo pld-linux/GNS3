@@ -81,23 +81,23 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/%{name}.desktop
 %{_pixmapsdir}/%{name}.png
 %lang(ar) %{py_sitescriptdir}/%{name}/Langs/Lang_ar.qm
-%lang(cn) %{py_sitescriptdir}/%{name}/Langs/Lang_cn.qm
+%lang(zh_CN) %{py_sitescriptdir}/%{name}/Langs/Lang_cn.qm
 %lang(de) %{py_sitescriptdir}/%{name}/Langs/Lang_de.qm
 %lang(en) %{py_sitescriptdir}/%{name}/Langs/Lang_en.qm
 %lang(es) %{py_sitescriptdir}/%{name}/Langs/Lang_es.qm
 %lang(fr) %{py_sitescriptdir}/%{name}/Langs/Lang_fr.qm
-%lang(jp) %{py_sitescriptdir}/%{name}/Langs/Lang_jp.qm
+%lang(ja) %{py_sitescriptdir}/%{name}/Langs/Lang_jp.qm
 %lang(kr) %{py_sitescriptdir}/%{name}/Langs/Lang_kr.qm
-%lang(pt_br) %{py_sitescriptdir}/%{name}/Langs/Lang_pt_br.qm
+%lang(pt_BR) %{py_sitescriptdir}/%{name}/Langs/Lang_pt_br.qm
 %lang(ru) %{py_sitescriptdir}/%{name}/Langs/Lang_ru.qm
 %lang(sk) %{py_sitescriptdir}/%{name}/Langs/Lang_sk.qm
 %lang(tr) %{py_sitescriptdir}/%{name}/Langs/Lang_tr.qm
 %lang(ar) %{py_sitescriptdir}/%{name}/Langs/qt_ar.qm
-%lang(cn) %{py_sitescriptdir}/%{name}/Langs/qt_cn.qm
+%lang(zh_CN) %{py_sitescriptdir}/%{name}/Langs/qt_cn.qm
 %lang(de) %{py_sitescriptdir}/%{name}/Langs/qt_de.qm
 %lang(es) %{py_sitescriptdir}/%{name}/Langs/qt_es.qm
 %lang(fr) %{py_sitescriptdir}/%{name}/Langs/qt_fr.qm
-%lang(jp) %{py_sitescriptdir}/%{name}/Langs/qt_jp.qm
-%lang(pt_br) %{py_sitescriptdir}/%{name}/Langs/qt_pt_br.qm
+%lang(ja) %{py_sitescriptdir}/%{name}/Langs/qt_jp.qm
+%lang(pt_BR) %{py_sitescriptdir}/%{name}/Langs/qt_pt_br.qm
 %lang(ru) %{py_sitescriptdir}/%{name}/Langs/qt_ru.qm
 %lang(sk) %{py_sitescriptdir}/%{name}/Langs/qt_sk.qm
