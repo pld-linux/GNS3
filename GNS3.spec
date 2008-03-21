@@ -87,7 +87,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(es) %{py_sitescriptdir}/%{name}/Langs/Lang_es.qm
 %lang(fr) %{py_sitescriptdir}/%{name}/Langs/Lang_fr.qm
 %lang(ja) %{py_sitescriptdir}/%{name}/Langs/Lang_jp.qm
-%lang(kr) %{py_sitescriptdir}/%{name}/Langs/Lang_kr.qm
+%lang(ko) %{py_sitescriptdir}/%{name}/Langs/Lang_kr.qm
 %lang(pt_BR) %{py_sitescriptdir}/%{name}/Langs/Lang_pt_br.qm
 %lang(ru) %{py_sitescriptdir}/%{name}/Langs/Lang_ru.qm
 %lang(sk) %{py_sitescriptdir}/%{name}/Langs/Lang_sk.qm
