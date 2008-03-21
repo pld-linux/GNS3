@@ -1,17 +1,16 @@
 Summary:	A graphical frontend for dynamips Cisco 7200 Simulator
 Summary(pl.UTF-8):	Graficzny interfejs do dynamips - symulatora Cisco 7200
 Name:		GNS3
-Version:	0.3.2
-Release:	0.3
+Version:	0.4
+Release:	0.1
 License:	GPL v2
 Group:		X11/Applications/Networking
 Source0:	http://dl.sourceforge.net/gns-3/%{name}-%{version}-src.tar.bz2
-# Source0-md5:	795d6082beaab80755f54890630e96a1
+# Source0-md5:	1b4ab1eb8a211127eb2bb11e7cac9e76
 Source1:	http://pfe.epitech.net/frs/download.php/599/%{name}-%{version}_documentation.pdf
 # Source1-md5:	0c9cd5c97d0f19f4c00f4e3abd316c87
 Source2:	%{name}.desktop
 Source3:	%{name}.png
-Patch0:		%{name}-setup.patch
 URL:		http://www.gns3.net/
 BuildRequires:	rpmbuild(macros) >= 1.231
 BuildRequires:	rpm-pythonprov
@@ -39,18 +38,15 @@ IOS-a pozwalającym użytkownikom uruchamiać binarne obrazy IOS-a z
 Cisco Systems.
 
 %prep
-%setup -q
-%patch0 -p1
+%setup -q -n %{name}-%{version}-src
 install %{SOURCE1} .
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 python ./setup.py install \
-	--root=$RPM_BUILD_ROOT
-
-# compile the scripts
-#{py_ocomp} $RPM_BUILD_ROOT%{py_sitescriptdir}
+	--root=$RPM_BUILD_ROOT \
+	--optimize=2
 
 # remove .py files, leave just compiled ones.
 %{py_postclean}
@@ -68,6 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %dir %{py_sitescriptdir}/%{name}
 %dir %{py_sitescriptdir}/%{name}/Config 
+%dir %{py_sitescriptdir}/%{name}/Defaults 
 %dir %{py_sitescriptdir}/%{name}/Dynagen 
 %dir %{py_sitescriptdir}/%{name}/External 
 %dir %{py_sitescriptdir}/%{name}/Globals 
@@ -79,11 +76,28 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitescriptdir}/%{name}/*.py[co]
 %{py_sitescriptdir}/%{name}/*/*.py[co]
 %{py_sitescriptdir}/%{name}/*/*/*.py[co]
-%{py_sitescriptdir}/%{name}/Dynagen/dynagen.ini
 %{py_sitescriptdir}/%{name}/Dynagen/configspec
 %{_mandir}/man1/gns3.1*
 %{_desktopdir}/%{name}.desktop
 %{_pixmapsdir}/%{name}.png
+%lang(ar) %{py_sitescriptdir}/%{name}/Langs/Lang_ar.qm
+%lang(cn) %{py_sitescriptdir}/%{name}/Langs/Lang_cn.qm
 %lang(de) %{py_sitescriptdir}/%{name}/Langs/Lang_de.qm
 %lang(en) %{py_sitescriptdir}/%{name}/Langs/Lang_en.qm
+%lang(es) %{py_sitescriptdir}/%{name}/Langs/Lang_es.qm
 %lang(fr) %{py_sitescriptdir}/%{name}/Langs/Lang_fr.qm
+%lang(jp) %{py_sitescriptdir}/%{name}/Langs/Lang_jp.qm
+%lang(kr) %{py_sitescriptdir}/%{name}/Langs/Lang_kr.qm
+%lang(pt_br) %{py_sitescriptdir}/%{name}/Langs/Lang_pt_br.qm
+%lang(ru) %{py_sitescriptdir}/%{name}/Langs/Lang_ru.qm
+%lang(sk) %{py_sitescriptdir}/%{name}/Langs/Lang_sk.qm
+%lang(tr) %{py_sitescriptdir}/%{name}/Langs/Lang_tr.qm
+%lang(ar) %{py_sitescriptdir}/%{name}/Langs/qt_ar.qm
+%lang(cn) %{py_sitescriptdir}/%{name}/Langs/qt_cn.qm
+%lang(de) %{py_sitescriptdir}/%{name}/Langs/qt_de.qm
+%lang(es) %{py_sitescriptdir}/%{name}/Langs/qt_es.qm
+%lang(fr) %{py_sitescriptdir}/%{name}/Langs/qt_fr.qm
+%lang(jp) %{py_sitescriptdir}/%{name}/Langs/qt_jp.qm
+%lang(pt_br) %{py_sitescriptdir}/%{name}/Langs/qt_pt_br.qm
+%lang(ru) %{py_sitescriptdir}/%{name}/Langs/qt_ru.qm
+%lang(sk) %{py_sitescriptdir}/%{name}/Langs/qt_sk.qm
