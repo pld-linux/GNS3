@@ -1,12 +1,12 @@
 Summary:	A graphical frontend for dynamips Cisco 7200 Simulator
 Summary(pl.UTF-8):	Graficzny interfejs do dynamips - symulatora Cisco 7200
 Name:		GNS3
-Version:	0.4
+Version:	0.4.1
 Release:	0.1
 License:	GPL v2
 Group:		X11/Applications/Networking
 Source0:	http://dl.sourceforge.net/gns-3/%{name}-%{version}-src.tar.bz2
-# Source0-md5:	1b4ab1eb8a211127eb2bb11e7cac9e76
+# Source0-md5:	d14ae3f0eac3aa974b74f76bca65b053
 Source1:	http://pfe.epitech.net/frs/download.php/599/%{name}-%{version}_documentation.pdf
 # Source1-md5:	0c9cd5c97d0f19f4c00f4e3abd316c87
 Source2:	%{name}.desktop
@@ -88,6 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(fr) %{py_sitescriptdir}/%{name}/Langs/Lang_fr.qm
 %lang(ja) %{py_sitescriptdir}/%{name}/Langs/Lang_jp.qm
 %lang(ko) %{py_sitescriptdir}/%{name}/Langs/Lang_kr.qm
+%lang(pl) %{py_sitescriptdir}/%{name}/Langs/Lang_pl.qm
 %lang(pt_BR) %{py_sitescriptdir}/%{name}/Langs/Lang_pt_br.qm
 %lang(ru) %{py_sitescriptdir}/%{name}/Langs/Lang_ru.qm
 %lang(sk) %{py_sitescriptdir}/%{name}/Langs/Lang_sk.qm
@@ -98,6 +99,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(es) %{py_sitescriptdir}/%{name}/Langs/qt_es.qm
 %lang(fr) %{py_sitescriptdir}/%{name}/Langs/qt_fr.qm
 %lang(ja) %{py_sitescriptdir}/%{name}/Langs/qt_jp.qm
+%lang(pl) %{py_sitescriptdir}/%{name}/Langs/qt_pl.qm
 %lang(pt_BR) %{py_sitescriptdir}/%{name}/Langs/qt_pt_br.qm
 %lang(ru) %{py_sitescriptdir}/%{name}/Langs/qt_ru.qm
 %lang(sk) %{py_sitescriptdir}/%{name}/Langs/qt_sk.qm
