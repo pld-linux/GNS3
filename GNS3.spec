@@ -2,7 +2,7 @@ Summary:	A graphical frontend for dynamips Cisco 7200 Simulator
 Summary(pl.UTF-8):	Graficzny interfejs do dynamips - symulatora Cisco 7200
 Name:		GNS3
 Version:	0.6.1
-Release:	0.1
+Release:	1
 License:	GPL v2
 Group:		X11/Applications/Networking
 Source0:	http://dl.sourceforge.net/gns-3/%{name}-%{version}-src.tar.bz2
