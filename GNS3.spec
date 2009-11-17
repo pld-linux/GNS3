@@ -12,8 +12,9 @@ Source1:	http://pfe.epitech.net/frs/download.php/599/%{name}-%{version}_document
 Source2:	%{name}.desktop
 Source3:	%{name}.png
 URL:		http://www.gns3.net/
-BuildRequires:	rpmbuild(macros) >= 1.231
+BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
+BuildRequires:	rpmbuild(macros) >= 1.231
 Requires:	dynagen
 Requires:	dynamips >= 0.2.8
 Requires:	python-PyQt4
@@ -63,16 +64,16 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS CHANGELOG README %{name}-%{version}_documentation.pdf
 %attr(755,root,root) %{_bindir}/*
 %dir %{py_sitescriptdir}/%{name}
-%dir %{py_sitescriptdir}/%{name}/Config 
-%dir %{py_sitescriptdir}/%{name}/Defaults 
-%dir %{py_sitescriptdir}/%{name}/Dynagen 
-%dir %{py_sitescriptdir}/%{name}/External 
-%dir %{py_sitescriptdir}/%{name}/Globals 
-%dir %{py_sitescriptdir}/%{name}/Langs 
-%dir %{py_sitescriptdir}/%{name}/Link 
-%dir %{py_sitescriptdir}/%{name}/Node 
-%dir %{py_sitescriptdir}/%{name}/Ui/ConfigurationPages 
-%dir %{py_sitescriptdir}/%{name}/Ui 
+%dir %{py_sitescriptdir}/%{name}/Config
+%dir %{py_sitescriptdir}/%{name}/Defaults
+%dir %{py_sitescriptdir}/%{name}/Dynagen
+%dir %{py_sitescriptdir}/%{name}/External
+%dir %{py_sitescriptdir}/%{name}/Globals
+%dir %{py_sitescriptdir}/%{name}/Langs
+%dir %{py_sitescriptdir}/%{name}/Link
+%dir %{py_sitescriptdir}/%{name}/Node
+%dir %{py_sitescriptdir}/%{name}/Ui/ConfigurationPages
+%dir %{py_sitescriptdir}/%{name}/Ui
 %{py_sitescriptdir}/%{name}/*.py[co]
 %{py_sitescriptdir}/%{name}/*/*.py[co]
 %{py_sitescriptdir}/%{name}/*/*/*.py[co]
