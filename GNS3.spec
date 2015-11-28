@@ -45,9 +45,7 @@ install %{SOURCE1} .
 %install
 rm -rf $RPM_BUILD_ROOT
 
-python ./setup.py install \
-	--root=$RPM_BUILD_ROOT \
-	--optimize=2
+%py_install
 
 # remove .py files, leave just compiled ones.
 %{py_postclean}
