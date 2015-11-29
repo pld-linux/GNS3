@@ -14,7 +14,7 @@ Source3:	%{name}.png
 URL:		http://www.gns3.net/
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.231
+BuildRequires:	rpmbuild(macros) >= 1.710
 Requires:	dynagen
 Requires:	dynamips >= 0.2.8
 Requires:	python-PyQt4
